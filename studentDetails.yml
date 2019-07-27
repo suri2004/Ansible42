@@ -1,0 +1,15 @@
+---
+- studentDetails:
+    - name: sai
+      phno: 8898989898
+      address: KPHB
+
+
+    - name: rajesh
+      phno: 898989898
+      address: KPHB
+
+
+    - name: Jai
+      phno: 8989898988
+      address: KPHB
