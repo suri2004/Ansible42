@@ -1,12 +1,11 @@
 ---
 - hosts: all
   tasks:
-  - name: install webserver on ubuntu16
+  - name: install webserver
     apt:
       name: apache2
       state: present
-
-  - name: start the webserver on ubuntu16
+  - name: start webserver
     service:
       name: apache2
       state: started
