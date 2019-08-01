@@ -1,0 +1,4 @@
+key: value
+
+webserveronubuntu: apache2
+webserveronamazon: httpd
