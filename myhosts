@@ -1,11 +1,10 @@
 [webservers]
 172.31.22.185
-172.31.29.26  
-172.31.25.137 
+
 
 [appservers]
-172.31.22.186
-172.31.26.163
+172.31.29.26  
+172.31.25.137 
 
 [dbservers]
 172.31.22.187
@@ -17,3 +16,7 @@
 [amazon]
 172.31.26.162
 
+
+[webservers:vars]
+mywebonubuntu: apache2
+mywebonamazon: httpd
