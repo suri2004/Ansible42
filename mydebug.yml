@@ -13,7 +13,7 @@
   - name: install git
     apt:
       name: git
-    when:  myresult.stderr =="
+    when:  myresult.stderr ==""
 
   - name: install tree
     apt: 
