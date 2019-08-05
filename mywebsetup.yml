@@ -1,0 +1,6 @@
+---
+- myhosts: webservers
+  become: yes
+  roles:
+    - mywebrole
+ 
