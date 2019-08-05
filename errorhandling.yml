@@ -9,6 +9,7 @@
   - name: install tree
     apt:
       namee: tree
+    ignore_errors: yes
   
   - name: install wget
     apt: 
