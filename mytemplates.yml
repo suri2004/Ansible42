@@ -1,0 +1,17 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: install apache2
+    apt:
+      name: apache2
+      state: present
+  - name: start webservers
+    service:
+      name: apache2
+      state: started
+
+  - name: copy index.j2  file into  nodes
+    template:
+      src: index.j2
+      dest: /var/www/html/index.html
