@@ -24,7 +24,7 @@
   template:
     src: templates/mytomuser.j2
     dest: /etc/tomcat7/tomcat-users.xml
-  notify: restarttomca
+  notify: restarttomcat
 
 - name: deploy java application on all nodes 
   get_url:
