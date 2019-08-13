@@ -1,2 +1,38 @@
 ---
 # tasks file for mytom7role2
+
+- name: install tomcat
+  apt:
+    name: tomcat7
+    state: present
+
+
+- name: copy tom config into nodes
+  template:
+    src: templates/mytomconfig.j2
+    dest: /etc/default/tomcat7
+  notify: restarttomcat
+
+- name: install additional packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - tomcat7-docs
+    - tomcat7-admin
+    - tomcat7-examples
+
+- name: copy tom user file into nodes 
+  template: 
+    src: templates/mytomuser.j2
+    dest: /etc/tomcat7/tomcat-users.xml
+  notify: restarttomcat
+
+- name: deploy java application
+  get_url:
+    url: https://maha1234.s3-us-west-2.amazonaws.com/mahaLogin.war
+    dest: /var/lib/tomcat7/webapps/mahaLogin.war
+    force_basic_auth: yes
+  notify: restarttomcat
+
+    
