@@ -28,8 +28,10 @@
 
 - name: deploy java application on all nodes 
   get_url:
-    url: https://maha1234.s3-us-west-2.amazonaws.com/mahaLogin.war
+    url: http://3.80.33.22:8081/artifactory/Test/1/target/mahaLogin-1.0.war
     dest: /var/lib/tomcat7/webapps/mahaLogin.war
+    username: admin
+    password: password
     force_basic_auth: yes
     
     
