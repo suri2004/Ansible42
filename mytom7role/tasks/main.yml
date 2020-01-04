@@ -35,6 +35,6 @@
     force_basic_auth: yes
 - name: debug
   debug:
-    msg: {{mybuildno}}
+    msg: "{{mybuildno}}"
   
     
